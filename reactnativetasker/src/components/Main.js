@@ -38,11 +38,15 @@ function Main() {
     }
 
     function deleteLastItem() {
+      if (counter === 0) {
+        alert('There is no items to delete!')
+      } else {
         let target = String(counter-1)
         let toDelete = document.getElementsByClassName(target)
         toDelete[0].remove()
         toDelete[0].remove()
         counter--
+      }
     }
 
 
@@ -53,7 +57,7 @@ function Main() {
     <div className = "App-main">
     <div className="search">
         <input placeholder="Add item" type="text" id='inputText'/>
-        <button type="submit" id="inputButton" onClick={handleInputButtonClick}>+</button>
+        <button type="reset" id="inputButton" onClick={handleInputButtonClick}>+</button>
         <button class="deleteButton" id="deleteButton" onClick={deleteLastItem}>
   <svg
     xmlns="http://www.w3.org/2000/svg"

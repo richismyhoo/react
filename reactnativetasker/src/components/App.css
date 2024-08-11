@@ -294,7 +294,7 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.search button[type="submit"] {
+.search button[type="reset"] {
   background-color: #4e99e9;
   border: none;
   color: #fff;
